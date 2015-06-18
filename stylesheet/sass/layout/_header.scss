@@ -1,0 +1,10 @@
+header {
+    border-bottom: 1px solid $default-border;
+    @include  clearfix();
+
+    h1 {
+        font-size: $font-size-h1;
+        text-align: center;
+        margin: 25px 262px 0 0;
+    }
+}
