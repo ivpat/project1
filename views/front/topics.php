@@ -1,11 +1,11 @@
-<?php include ('include/header.php'); ?>
+<?php include ('../partials/header.php'); ?>
 
     <section id="topics-page">
         <div class="container">
             <div class="row">
                 <div class="row-same-height row-full-height with-border-bottom">
                     <div class="col-md-2 with-border-right col-md-height col-full-height col-top">
-                        <?php include ('include/navigation.php'); ?>
+                        <?php include ('../partials/navigation.php'); ?>
 
                         <div id="statistic">
                             <span>Overall</span>
