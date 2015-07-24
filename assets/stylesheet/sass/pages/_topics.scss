@@ -1,156 +1,234 @@
+//@import "social/*.png";
+//@include all-social-sprites;
 #topics-page {
-    .with-border-right {
-        border-right: 1px solid $default-border;
-    }
+    @extend %height;
 
-    .with-border-left {
-        border-left: 1px solid $default-border;
-    }
+    .cnt-row {
+        display: table;
+        height: 100%;
+        width: 100%;
 
-    .with-border-bottom {
-        border-bottom: 1px solid $default-border;
-    }
-
-    .without-padding {
-        padding: 0;
-    }
-
-    #statistic {
-        padding: 50px 20px 50px;
-
-        .statistic-progress {
-            height: 3px;
-
-            .progress-bar-lavender {
-                background-color: $progress-lila;
-            }
-
-            .progress-bar-success-light {
-                background-color: $progress-success;
-            }
+        .with-border-right {
+            border-right: 1px solid $default-border;
         }
 
-        span {
-            color: #949494;
-            font-size: $font-size-small;
-        }
-    }
-
-    #primary-content {
-        .topics-tabs {
-            background-color: $tab-bg;
-            padding: 20px 0;
-            text-align: center;
-
-            li {
-                margin: 0 10px;
-                float: none;
-                display: inline-block;
-
-                a {
-
-                    padding: 3px 10px;
-                    font-size: $font-size-small;
-                    font-weight: 700;
-                }
-            }
-
-            .active a {
-                background-color: $tab-primary-active;
-                @include border-radius(20px);
-                border: none;
-                font-weight: 400;
-                color: #fff;
-            }
-        }
-    }
-
-    .without-padding-right {
-        padding-right: 0;
-    }
-
-    .topics-tabs-content {
-        border-bottom: 0;
-
-
-        li {
-            float: none;
-
-            a {
-                @include border-radius(0);
-                margin-right: 0;
-
-                input {
-                    margin-top: 10px;
-                }
-            }
+        .with-border-left {
+            border-left: 1px solid $default-border;
         }
 
-        .active a {
-            background-color: $tab-primary-active;
-            border: none;
-            color: $body-bg;
+        .with-border-bottom {
+            border-bottom: 1px solid $default-border;
         }
-    }
 
-    article {
-        .tab-content-inner {
-            padding: 20px 20px 20px 5px;
+        .without-padding {
+            padding: 0;
+        }
 
-            .time-line {
-                color: $link-color;
-                font-size: $font-size-small;
-                i {
-                    margin-right: 10px;
+        .nav-col {
+            display: table-cell;
+            width: 10%;
+
+            #cnt-statistic {
+                padding: 50px 20px 50px;
+
+                .statistic-progress {
+                    height: 3px;
+
+                    .progress-bar-lavender {
+                        background-color: $progress-lila;
+                    }
+
+                    .progress-bar-success-light {
+                        background-color: $progress-success;
+                    }
                 }
 
                 span {
-                    margin: 15%;
+                    color: #949494;
+                    font-size: $font-size-small;
                 }
             }
         }
+        .primary-col {
+            width: 75%;
+            display: table-cell;
+            position: relative;
 
-        .summary {
+            #primary-content {
+                .topics-tabs {
+                    background-color: $tab-bg;
+                    padding: 20px 0;
+                    text-align: center;
 
-            padding-bottom: 50px;
-            .summary-content  {
-                float: left;
-            }
+                    li {
+                        margin: 0 10px;
+                        float: none;
+                        display: inline-block;
 
-            img {
-                width: 120px;
-                @extend .summary-content;
-            }
-        }
-    }
+                        a {
 
-    #secondary-content {
-        padding: 0!important;
-        @extend #navigation;
-
-        h4 {
-            font: $font-size-h4;
-            color: #787878;
-            margin: 30px 0 25px 0;
-        }
-
-        ul {
-            li {
-                a {
-                    color: $black-base;
-                    font-weight: $font-family-700;
-                    margin: 0;
-                    cursor: pointer;
-
-                    i span{
-                        font-size: 16px;
-                        margin-left: 5px;
+                            padding: 3px 10px;
+                            font-size: $font-size-small;
+                            font-weight: 700;
+                        }
                     }
 
-                    &:hover { color: $tab-primary-active;}
+                    .active a {
+                        background-color: $tab-primary-active;
+                        @include border-radius(20px);
+                        border: none;
+                        font-weight: 400;
+                        color: #fff;
+                    }
+                }
+
+                .topics-tabs-content {
+                    &-pane {
+                        .cnt-content-element {
+                            display: table;
+                            width: 100%;
+
+                            .content-element-tabs {
+                                width: 22%;
+                                border-right: 1px solid #d0dede;
+                                display: table-cell;
+                                position: absolute;
+                                top: 66px;
+                                bottom: 0;
+
+                                /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+21px,e1e1e1+0,ffffff+22.5,ffffff+100 */
+                                background: #ffffff; /* Old browsers */
+                                /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+                                background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjQ4JSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjQ5JSIgc3RvcC1jb2xvcj0iI2UxZTFlMSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjQ5JSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+                                background: -moz-linear-gradient(left,  #ffffff 0%, #ffffff 21px, #e1e1e1 0%, #ffffff 22.5px, #ffffff 100%); /* FF3.6+ */
+                                background: -webkit-gradient(linear, left top, right top, color-stop(0%,#ffffff), color-stop(21px,#ffffff), color-stop(0%,#e1e1e1), color-stop(22.5px,#ffffff), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
+                                background: -webkit-linear-gradient(left,  #ffffff 0%,#ffffff 21px,#e1e1e1 0%,#ffffff 22.5px,#ffffff 100%); /* Chrome10+,Safari5.1+ */
+                                background: -o-linear-gradient(left,  #ffffff 0%,#ffffff 21px,#e1e1e1 0%,#ffffff 22.5px,#ffffff 100%); /* Opera 11.10+ */
+                                background: -ms-linear-gradient(left,  #ffffff 0%,#ffffff 21px,#e1e1e1 0%,#ffffff 22.5px,#ffffff 100%); /* IE10+ */
+                                background: linear-gradient(to right,  #ffffff 0%,#ffffff 21px,#e1e1e1 0%,#ffffff 22.5px,#ffffff 100%); /* W3C */
+                                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=1 ); /* IE6-8 */
+
+
+                                .content-element-tabs-nav {
+                                    border-bottom: 0;
+
+                                    li {
+                                        float: none;
+
+                                        a {
+                                            @include border-radius(0);
+                                            margin-right: 0;
+                                            color: $black-base;
+                                            opacity: .8;
+
+                                            i {
+                                                display: none;
+                                            }
+
+                                            input {
+                                                margin-top: 10px;
+                                            }
+
+                                            b {
+                                                color: inherit;
+                                            }
+                                        }
+                                    }
+
+                                    .active a {
+                                        background-color: $tab-primary-active;
+                                        border: none;
+                                        color: $body-bg;
+                                        position: relative;
+                                        opacity: .8;
+
+                                        i {
+                                            display: block;
+                                            position: absolute;
+                                            top: 40%;
+                                            right: 5%;
+                                        }
+                                    }
+                                }
+                            }
+
+                            .pane-content {
+                                width: 78%;
+                                padding: 0 0 0 25px;
+                                display: table-cell;
+
+                                .tab-content-nav {
+                                    article {
+                                        .tab-content-inner {
+                                            padding: 20px 25px 20px 5px;
+
+                                            .time-line {
+                                                color: $link-color;
+                                                font-size: $font-size-small;
+                                                i {
+                                                    margin-right: 10px;
+                                                }
+
+                                                span {
+                                                    margin: 15%;
+                                                }
+                                            }
+                                        }
+
+                                        .summary {
+                                            padding-bottom: 50px;
+
+                                            &-content {
+                                                float: left;
+                                                margin-right: 20px;
+
+                                                &-list {
+                                                    &-group {
+                                                        position: relative;
+                                                        margin-bottom: 35px;
+
+                                                        i {
+                                                            position: absolute;
+                                                            top: 28%;
+                                                            color: #ccc;
+                                                        }
+
+                                                        b {
+                                                            display: block;
+                                                            margin-left: 30px;
+                                                            font-weight: 600;
+                                                            font-size: $font-size-small;
+                                                        }
+
+                                                        span {
+                                                            margin-left: 30px;
+                                                            color: #949494;
+                                                            font-weight: 300;
+                                                        }
+                                                    }
+                                                }
+                                            }
+
+                                            img {
+                                                width: 100px;
+                                                @extend .summary-content;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
 
+        .without-padding-right {
+            padding-right: 0;
+        }
+
+        .secondary-col {
+            @extend .with-border-bottom;
+        }
     }
 }
